@@ -10,6 +10,7 @@ export interface MapCell {
   threatLevel: number;
   importanceLevel:number;
   isInIsrael: boolean;
+  coverage: number;
 }
 
 export interface Dome {

@@ -12,8 +12,8 @@ export class MapController {
   }
 
   @Post('domes/:count')
-  placeDomes(@Param('count') count: string): Dome[] {
-    return this.mapService.placeDomes(parseInt(count, 10));
+  async placeDomes(@Param('count') count: string): Promise<Dome[]> {  // Made async
+    return await this.mapService.placeDomes(parseInt(count, 10));
   }
 
   @Post('reset')
